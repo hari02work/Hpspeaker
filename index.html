@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bluetooth Connect</title>
+  <title>QR Bluetooth Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="text-align:center; font-family:Arial;">
-  <h2>QR Based Speaker Connection</h2>
-  <button style="padding:15px; font-size:18px;" onclick="connect()">
-    Connect Speaker
+
+<body style="text-align:center; font-family:Arial; background-color:#e6f2ff; padding:20px;">
+
+  <h1>Connecting a Bluetooth Speaker Using QR Code</h1>
+  <hr>
+
+  <h3>Project Details</h3>
+
+  <p><b>Student Name:</b> H.Pragadeesh</p>
+  <p><b>Class:</b> 3rd Standard</p>
+  <p><b>School Name:</b> Sri Chaitanya School ---- Thiruvanamalai</p>
+  <p><b>Teacher Name:</b> Madam </p>
+  <p><b>Date:</b> 23/02/2016</p>
+
+  <hr>
+
+  <h2>Click Below to Connect Speaker</h2>
+
+  <button style="padding:15px; font-size:18px; background-color:#4CAF50; color:white; border:none; border-radius:8px;" onclick="connect()">
+    🔊 Connect Speaker
   </button>
 
   <script>
@@ -15,11 +32,17 @@
         const device = await navigator.bluetooth.requestDevice({
           acceptAllDevices: true
         });
+
         alert("Selected Device: " + device.name);
+
       } catch (error) {
         alert("Connection Cancelled or Failed");
       }
     }
   </script>
+
+  <br><br>
+  <p><i>Speaker Used: boAt Bluetooth Speaker</i></p>
+
 </body>
 </html>

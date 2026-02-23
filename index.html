@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bluetooth Connect</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+  <h2>QR Based Speaker Connection</h2>
+  <button style="padding:15px; font-size:18px;" onclick="connect()">
+    Connect Speaker
+  </button>
+
+  <script>
+    async function connect() {
+      try {
+        const device = await navigator.bluetooth.requestDevice({
+          acceptAllDevices: true
+        });
+        alert("Selected Device: " + device.name);
+      } catch (error) {
+        alert("Connection Cancelled or Failed");
+      }
+    }
+  </script>
+</body>
+</html>
